@@ -1,0 +1,10 @@
+# gradle files
+.gradle/
+build/
+
+# Intellij files
+*.iml
+.idea/
+
+# Sample files
+sample.csv
