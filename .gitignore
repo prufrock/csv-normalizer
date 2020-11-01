@@ -8,3 +8,4 @@ build/
 
 # Sample files
 sample.csv
+sample-with-broken-utf8.csv
