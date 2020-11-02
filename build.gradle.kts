@@ -15,6 +15,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.opencsv:opencsv:5.3")
     testImplementation(kotlin("test-junit5"))
 }
 
