@@ -42,3 +42,12 @@ internal class FormatFullNameTest {
         assertEquals("株式会社スタジオジブリ", formatter.processString("株式会社スタジオジブリ"))
     }
 }
+
+internal class ConvertDurationToSecondsTest {
+    @Test
+    fun testItConvertsDurationToSeconds() {
+        val formatter = ConvertDurationToSeconds()
+        assertEquals("0.0", formatter.processString("0:00:00.00"))
+        assertEquals("5012.123", formatter.processString("1:23:32.123"))
+    }
+}
