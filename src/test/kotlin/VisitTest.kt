@@ -17,3 +17,18 @@ internal class FormatTimestampTest {
         assertEquals("2011-04-01T14:00:00-04:00", formatter.processString("4/1/11 11:00:00 AM"))
     }
 }
+
+
+internal class PadZipTest {
+
+    @Test
+    fun testItFormatsZipsCorrectly() {
+        val formatter = PadZip()
+        assertEquals("00000", formatter.processString(""))
+        assertEquals("00001", formatter.processString("1"))
+        assertEquals("00021", formatter.processString("21"))
+        assertEquals("00321", formatter.processString("321"))
+        assertEquals("04321", formatter.processString("4321"))
+        assertEquals("54321", formatter.processString("54321"))
+    }
+}
