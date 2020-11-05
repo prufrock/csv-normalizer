@@ -19,6 +19,7 @@ class Visit {
     var zip: String = ""
 
     @CsvBindByName
+    @PreAssignmentProcessor(processor = FullNameFormatter::class)
     var fullName: String = ""
 
     @CsvBindByName
@@ -52,6 +53,19 @@ class PadZip: StringProcessor {
             return value
         }
         return value.padStart(5, '0')
+    }
+
+    override fun setParameterString(value: String?) {
+        /* no-op */
+    }
+}
+
+class FullNameFormatter: StringProcessor {
+    override fun processString(value: String?): String?  {
+        if (value == null) {
+            return value
+        }
+        return value.toUpperCase()
     }
 
     override fun setParameterString(value: String?) {

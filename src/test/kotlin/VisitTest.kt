@@ -32,3 +32,13 @@ internal class PadZipTest {
         assertEquals("54321", formatter.processString("54321"))
     }
 }
+
+internal class FormatFullNameTest {
+    @Test
+    fun testItFormatsFullNames() {
+        val formatter = FullNameFormatter()
+        assertEquals("MONKEY ALBERTO", formatter.processString("Monkey Alberto"))
+        assertEquals("SUPERMAN ÜBERTAN", formatter.processString("Superman übertan"))
+        assertEquals("株式会社スタジオジブリ", formatter.processString("株式会社スタジオジブリ"))
+    }
+}

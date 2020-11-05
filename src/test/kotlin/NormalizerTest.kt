@@ -15,7 +15,7 @@ internal class NormalizerTest {
 
         val expected = """
             TIMESTAMP,ADDRESS,ZIP,FULLNAME,FOODURATION,BARDURATION,TOTALDURATION,NOTES
-            2011-04-01T14:00:00-04:00,"123 4th St, Anywhere, AA",94121,Monkey Alberto,1:23:32.123,1:32:33.123,zzsasdfa,I am the very model of a modern major general
+            2011-04-01T14:00:00-04:00,"123 4th St, Anywhere, AA",94121,MONKEY ALBERTO,1:23:32.123,1:32:33.123,zzsasdfa,I am the very model of a modern major general
             
         """.trimIndent()
 
