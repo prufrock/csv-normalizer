@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
             exitProcess(1)
         }
 
-        val normalizer = Normalizer(BufferedWriter(OutputStreamWriter(System.out))).run(input)
+        Normalizer(BufferedWriter(OutputStreamWriter(System.out))).run(input)
 
         exitProcess(0)
 
