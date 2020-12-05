@@ -37,7 +37,7 @@ class Visit {
     @CsvBindByName
     var totalDuration: String = ""
         get() {
-            return (fooDuration.toDouble() + barDuration.toDouble()).toString()
+            return (fooDuration.toBigDecimal() + barDuration.toBigDecimal()).toString()
         }
 
     @CsvBindByName
