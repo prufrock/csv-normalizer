@@ -43,4 +43,24 @@ internal class ConvertDurationToSecondsTest {
         assertEquals("0.0", formatter.processString("0:00:00.00"))
         assertEquals("5012.123", formatter.processString("1:23:32.123"))
     }
+
+    @Test
+    fun addDurations() {
+        val numbers: List<List<String>> = listOf(
+            listOf("1:23:32.123", "1:32:33.123"),
+            listOf("31:23:32.123", "1:32:33.123")
+        )
+        val formatter = ConvertDurationToSeconds()
+
+
+        numbers.forEach {
+            val foo = formatter.processString(it[0])!!.toBigDecimal()
+            val bar = formatter.processString(it[1])!!.toBigDecimal()
+
+            val result = (foo + bar).toString()
+            print("foo: $foo bar: $bar result: $result \n")
+        }
+
+        assertTrue(true)
+    }
 }
